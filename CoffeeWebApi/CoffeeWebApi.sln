@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeWebApi", "CoffeeWebApi\CoffeeWebApi.csproj", "{D4A2E170-B10E-4F89-B19D-9B594F1C6683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeWebApiXunit.Tests", "CoffeeWebApiXunit.Tests\CoffeeWebApiXunit.Tests.csproj", "{92185C74-85AD-4118-A3AB-FA030A6EA05E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4A2E170-B10E-4F89-B19D-9B594F1C6683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A2E170-B10E-4F89-B19D-9B594F1C6683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A2E170-B10E-4F89-B19D-9B594F1C6683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A2E170-B10E-4F89-B19D-9B594F1C6683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92185C74-85AD-4118-A3AB-FA030A6EA05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92185C74-85AD-4118-A3AB-FA030A6EA05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92185C74-85AD-4118-A3AB-FA030A6EA05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92185C74-85AD-4118-A3AB-FA030A6EA05E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA3AA888-B957-423A-A103-1545DA35FD25}
+	EndGlobalSection
+EndGlobal
