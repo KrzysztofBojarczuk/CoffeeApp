@@ -19,14 +19,14 @@ namespace CoffeeWebApi.Controllers
             _coffeRepository = coffeRepository;
             _mapper = mapper;
         }
-        [HttpGet("Get")]
+        [HttpGet]
         public async Task<IActionResult> GetAllCoffe()
         {
             var coffee = await _coffeRepository.GetAllCoffeesAsync();
             var coffeeDto = _mapper.Map<List<CoffeeGetDto>>(coffee);
             return Ok(coffeeDto);
         }
-        [HttpGet("Get/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetCoffeeById(int id)
         {
             var coffee = await _coffeRepository.GetCoffeeByIdAsync(id);
@@ -37,7 +37,7 @@ namespace CoffeeWebApi.Controllers
             var coffeeGet = _mapper.Map<CoffeeGetDto>(coffee);
             return Ok(coffeeGet);
         }
-        [HttpPost("Post")]        
+        [HttpPost]        
         public async Task<IActionResult> CreateCoffee([FromBody] CoffeeCreateDto coffeeCreateDto)
         {
             var coffee = _mapper.Map<Coffee>(coffeeCreateDto);
@@ -45,7 +45,7 @@ namespace CoffeeWebApi.Controllers
             var coffeeGet = _mapper.Map<CoffeeGetDto>(coffee);
             return CreatedAtAction(nameof(GetCoffeeById), new { id = coffee.Id }, coffeeGet);
         }
-        [HttpPut("Put/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCoffe([FromBody] CoffeeCreateDto update, int id)
         {
             var toUpdate = _mapper.Map<Coffee>(update);
@@ -53,7 +53,7 @@ namespace CoffeeWebApi.Controllers
             await _coffeRepository.UpdateCoffeeAsync(toUpdate);
             return NoContent();
         }
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCoffee(int id)
         {
             var coffee = await _coffeRepository.DeleteCoffeeAsync(id);
